@@ -45,7 +45,7 @@ main > img {
 }
 
 .info {
-	border-radius: var(--border-radius);
+	border-radius: 0 0 var(--border-radius) var(--border-radius);
 	display: flex;
 	flex-flow: column nowrap;
 	padding: 2rem;
@@ -61,6 +61,7 @@ main > img {
 	display: block;
 }
 
+/* PERFUME */
 .info > span:first-child {
 	opacity: 0.9;
 	letter-spacing: .5rem;
@@ -68,18 +69,21 @@ main > img {
 	font-family: Montserrat;
 }
 
+/* Name of item */
 .info > span:nth-child(2) {
 	font-size: 3.2rem;
 	font-weight: 700;
 	line-height: 1;
 }
 
+/* Item description */
 .info > span:nth-child(3) {
 	opacity: 0.9;
 	font-family: Montserrat;
 	font-size: 1.3rem;
 }
 
+/* Price */
 .info > span:nth-child(4) {
 	display: flex;
 	flex-flow: row nowrap;
@@ -88,6 +92,7 @@ main > img {
 	color: hsl(158, 36%, 37%);
 }
 
+/* Old price */
 .info > span:nth-child(4) > span {
 	height: fit-content;
 	transform: translateY(1rem);
@@ -98,6 +103,7 @@ main > img {
 	text-decoration: line-through;
 }
 
+/* Add to cart */
 .info > span:nth-child(5) {
 	display: flex;
 	flex-flow: row nowrap;
@@ -116,7 +122,50 @@ main > img {
 	margin-right: auto;
 }
 
+/* Cart image */
 .info > span:nth-child(5) > img  {
 	border-radius: 0;
 	padding-right: 1rem;
+}
+
+.largeimage {
+	display: none;
+}
+
+@media (min-width: 376px) {
+	body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	main {
+		align-items: center;
+		justify-content: center;
+		flex-flow: row nowrap;
+		width: 700px;
+		height: 500px;
+	}
+
+	main > img {
+		border-radius: var(--border-radius) 0 0 var(--border-radius);
+		height: 100%;
+	}
+
+	.info {
+		border-radius: 0 var(--border-radius) var(--border-radius) 0;
+	}
+
+	.info > span:nth-child(3) {
+		font-size: 1.5rem;
+		line-height: 2.5rem;
+	}
+
+	.smallimage {
+		display: none;
+	}
+
+	.largeimage {
+		display: block;
+	}
 }
