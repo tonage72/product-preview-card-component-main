@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&family=Montserrat&family=Outfit&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Hanken+Grotesk&family=Montserrat&family=Outfit&family=Pacifico&display=swap');
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+:root {
+	--border-radius: 1rem;
+}
+
+html {
+	font-family: Fraunces;
+	font-size: 11px;
+	text-align: center;
+	color: hsl(228, 45%, 44%);
+}
+
+body {
+	padding: 3rem 1.5rem ;
+	width: 100vw;
+	height: 100vh;
+	background-color: hsl(30, 38%, 92%);
+}
+
+main {
+	display: flex;
+	flex-flow: column nowrap;
+	height: 100%;
+	border-radius: var(--border-radius);
+}
+
+main img {
+	border-top-right-radius: var(--border-radius);
+	border-top-left-radius: var(--border-radius);
+}
+
+.info {
+	border-radius: var(--border-radius);
+	display: flex;
+	flex-flow: column nowrap;
+	padding: 2rem;
+	height: 100%;
+	align-items: flex-start;
+	justify-content: space-around;
+	text-align: left;
+	background-color: white;
+	color: black;
+}
+
+.info > span {
+	display: block;
+}
+
+.info > span:first-child {
+	opacity: 0.9;
+	letter-spacing: .5rem;
+	text-transform: uppercase;
+	font-family: Montserrat;
+}
+
+.info > span:nth-child(2) {
+	font-size: 3.2rem;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.info > span:nth-child(3) {
+	opacity: 0.9;
+	font-family: Montserrat;
+	font-size: 1.3rem;
+}
+
+.info > span:nth-child(4) {
+	display: flex;
+	flex-flow: row nowrap;
+	font-size: 3rem;
+	font-weight: 700;
+	color: hsl(158, 36%, 37%);
+}
+
+.info > span:nth-child(4) > span {
+	height: fit-content;
+	transform: translateY(1rem);
+	padding-left: 2rem;
+	font-size: 1.3rem;
+	color: black;
+	opacity: 0.9;
+	text-decoration: line-through;
+}
+
+.info > span:nth-child(5) {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	font-family: Montserrat;
+	font-size: 1.2rem;
+	font-weight: 700;
+	letter-spacing: .1rem;
+	color: white;
+	background-color: hsl(158, 36%, 37%);
+	border-radius: var(--border-radius);
+	height: 4.5rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.info > span:nth-child(5) > img  {
+	border-radius: 0;
+	padding-right: 1rem;
+}
