@@ -5,6 +5,11 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	
+}
+
+img {
+	display: block;
 }
 
 :root {
@@ -19,7 +24,8 @@ html {
 }
 
 body {
-	padding: 3rem 1.5rem ;
+	scrollbar-gutter: stable;
+	padding: 2rem 1rem;
 	width: 100vw;
 	height: 100vh;
 	background-color: hsl(30, 38%, 92%);
@@ -28,11 +34,12 @@ body {
 main {
 	display: flex;
 	flex-flow: column nowrap;
-	height: 100%;
+	width: 95%;
+	height: 95%;
 	border-radius: var(--border-radius);
 }
 
-main img {
+main > img {
 	border-top-right-radius: var(--border-radius);
 	border-top-left-radius: var(--border-radius);
 }
